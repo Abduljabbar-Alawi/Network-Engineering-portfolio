@@ -17,7 +17,7 @@ cisco
 interface GigabitEthernet0/0
  switchport trunk allowed vlan 10,20
 
-5. Verification
+## 5. Verification
 
 · Re-executed show interfaces trunk -> Confirmed Vlans allowed on trunk: 10,20.
 · Ping from PC-SALES to PC-HR -> Success (!!!!!).
