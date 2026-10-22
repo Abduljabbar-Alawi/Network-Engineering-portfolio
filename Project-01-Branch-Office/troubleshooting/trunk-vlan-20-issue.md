@@ -13,7 +13,6 @@ The trunk link between SW1 and R1 was manually restricted to only allow VLAN 10.
 
 ## 4. The Fix
 Reconfigured the trunk port on SW1 to allow both VLANs:
-cisco
 interface GigabitEthernet0/0
  switchport trunk allowed vlan 10,20
 
