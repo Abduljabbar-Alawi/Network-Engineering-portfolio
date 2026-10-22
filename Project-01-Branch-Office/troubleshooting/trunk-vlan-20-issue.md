@@ -19,6 +19,6 @@ interface GigabitEthernet0/0
 
 ## 5. Verification
 
-· Re-executed show interfaces trunk -> Confirmed Vlans allowed on trunk: 10,20.
-· Ping from PC-SALES to PC-HR -> Success (!!!!!).
-· Ping from PC-HR to gateway -> Success.
+ Re-executed show interfaces trunk -> Confirmed Vlans allowed on trunk: 10,20.
+ Ping from PC-SALES to PC-HR -> Success (!!!!!).
+ Ping from PC-HR to gateway -> Success.
