@@ -17,7 +17,7 @@ A simulated small branch office network designed to separate two departments (Sa
 
 ## 🧪 Verification & Results
 ### VLAN & Trunk Status
-![VLAN Status](evidence/01-vlan-status.jpg)
+![VLAN Status](evidence/01-Vlan-status.jpg)
 ![Trunk Status](evidence/02-trunk-status.jpg)
 
 ### Connectivity Tests
