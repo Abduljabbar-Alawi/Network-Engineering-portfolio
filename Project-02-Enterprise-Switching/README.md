@@ -1,11 +1,10 @@
-
 # 🏢 Project 02: Enterprise Switching & Redundancy
 
 ## 📌 Overview
 A highly available Layer 2 enterprise network built with a triangle topology (SW1, SW2, SW3). The project demonstrates how to combine VLANs, 802.1Q Trunking, LACP EtherChannel for bandwidth aggregation, Spanning Tree Protocol (STP) for loop prevention, and STP Security to protect access ports.
 
 ## 🏗️ Topology & IP Plan
-![Topology](images/topology.png)
+![Topology](evidence/topology.png)
 
 - **Devices:** 3x Cisco vIOS-L2 Switches, 4x VPCS.
 - **VLAN 10 (USERS_VLAN10):** 192.168.10.0/24 (PC-A: .11, PC-B: .12).
@@ -22,22 +21,22 @@ A highly available Layer 2 enterprise network built with a triangle topology (SW
 
 ### 1. VLAN & Trunking
 Access ports correctly assigned to their respective VLANs.
-![SW1 VLANs](images/sw1-vlan.png)
-![SW2 VLANs](images/sw2-vlan.png)
+![SW1 VLANs](evidence/sw1-vlan.png)
+![SW2 VLANs](evidence/sw2-vlan.png)
 
 ### 2. EtherChannel (LACP)
 Port-Channel 1 successfully bundled using LACP.
-![EtherChannel](images/etherchannel.png)
+![EtherChannel](evidence/etherchannel.png)
 
 ### 3. Spanning Tree (STP) & Security
 - SW1 is confirmed as the Root Bridge.
-![STP Root](images/stp-root.png)
+![STP Root](evidence/stp-root.png)
 - PortFast and BPDU Guard are active on access ports to prevent loops.
-![STP Security](images/stp-security.png)
+![STP Security](evidence/stp-security.png)
 
 ### 4. Connectivity Tests
 Successful intra-VLAN ping between PC-A and PC-B.
-![Ping Test](images/ping-test.png)
+![Ping Test](evidence/ping-test.png)
 
 ## 💡 Lessons Learned
 - STP is critical in redundant topologies to prevent Layer 2 loops.
