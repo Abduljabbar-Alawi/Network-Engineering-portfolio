@@ -4,7 +4,7 @@
 A highly available Layer 2 enterprise network built with a triangle topology (SW1, SW2, SW3). The project demonstrates how to combine VLANs, 802.1Q Trunking, LACP EtherChannel for bandwidth aggregation, Spanning Tree Protocol (STP) for loop prevention, and STP Security to protect access ports.
 
 ## 🏗️ Topology & IP Plan
-![Topology](evidence/topology.png)
+![Topology](evidence/connected-topology.png)
 
 - **Devices:** 3x Cisco vIOS-L2 Switches, 4x VPCS.
 - **VLAN 10 (USERS_VLAN10):** 192.168.10.0/24 (PC-A: .11, PC-B: .12).
@@ -36,7 +36,7 @@ Port-Channel 1 successfully bundled using LACP.
 
 ### 4. Connectivity Tests
 Successful intra-VLAN ping between PC-A and PC-B.
-![Ping Test](evidence/ping-test.png)
+![Ping Test](evidence/ping-tests.png)
 
 ## 💡 Lessons Learned
 - STP is critical in redundant topologies to prevent Layer 2 loops.
