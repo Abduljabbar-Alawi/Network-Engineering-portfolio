@@ -46,5 +46,5 @@ Read the full incident report here:
 - Placing the default gateway on the router (Router-on-a-Stick) is an efficient way to route traffic between VLANs.
 
 ## 📂 Device Configurations
-- [R1 Configuration](configs/R1.txt)
-- [SW1 Configuration](configs/SW1.txt)
+- [R1 Configuration](configs/R1.md)
+- [SW1 Configuration](configs/SW1.md)
