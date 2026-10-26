@@ -11,10 +11,17 @@ A highly available Layer 2 enterprise network built with a triangle topology (SW
 - **VLAN 20 (USERS_VLAN20):** 192.168.20.0/24 (PC-C: .11, PC-D: .12).
 - **Switch Roles:** SW1 (Root Bridge), SW2 (Access), SW3 (Access).
 
+## 🛡️ Baseline Configuration
+Before implementing the switching features, all switches were hardened with:
+- Encrypted passwords using SCRYPT (Type 9).
+- Local user accounts (`admin`) for authentication.
+- SSH enabled for secure remote management (Telnet disabled).
+- Unused ports shut down.
+
 ## ⚙️ Implementation
 - **VLANs & Trunks:** Configured VLANs 10 & 20 and allowed them over 802.1Q Trunks between switches.
 - **EtherChannel (LACP):** Bundled Gi0/1 and Gi0/2 between SW2 and SW3 into Port-Channel 1 using LACP.
-- **Spanning Tree (STP):** Configured SW1 as the Primary Root Bridge.
+- **Spanning Tree (STP):** Configured SW1 as the Primary Root Bridge for both VLANs.
 - **STP Security:** Enabled PortFast and BPDU Guard on all end-device access ports.
 
 ## 🧪 Verification & Results
@@ -38,6 +45,11 @@ Port-Channel 1 successfully bundled using LACP.
 Successful intra-VLAN ping between PC-A and PC-B.
 ![Ping Test](evidence/ping-tests.png)
 
+## 💥 Troubleshooting
+During a security test, a rogue switch was connected to an access port. BPDU Guard immediately disabled the port to prevent a Layer 2 loop. 
+Read the full incident report here:
+👉 **[View BPDU Guard Incident Report](troubleshooting/bpduguard-incident.md)**
+
 ## 💡 Lessons Learned
 - STP is critical in redundant topologies to prevent Layer 2 loops.
 - LACP EtherChannel provides increased bandwidth without causing STP loops.
@@ -45,6 +57,6 @@ Successful intra-VLAN ping between PC-A and PC-B.
 - Switches alone cannot route traffic between different VLANs (Inter-VLAN requires a Layer 3 device).
 
 ## 📂 Device Configurations
-- [SW1 Configuration](configs/SW1.txt)
-- [SW2 Configuration](configs/SW2.txt)
-- [SW3 Configuration](configs/SW3.txt)
+- [SW1 Configuration](configs/SW1.md)
+- [SW2 Configuration](configs/SW2.md)
+- [SW3 Configuration](configs/SW3.md)
