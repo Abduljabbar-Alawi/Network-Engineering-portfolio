@@ -9,8 +9,8 @@ hostname SW1-Root-bridge
 no ip domain-lookup
 ip domain-name netsec.com
 service password-encryption
-enable secret 9 $9$lM.3KguVTlwHX9$MmLjMlbxfkUvSJkzsp8zuB1H24LNY0FA.Wlblf.VhTg
-username admin privilege 15 secret 5 $1$p/aZ$ZiE4/q5z4zW2Oi0lEm7Zh.
+enable secret <REDACTED_SECRET_HASH>
+username admin privilege 15 secret <REDACTED_SECRET_HASH>
 banner motd # Unauthorized Access Prohibited! #
 no ip http server
 no ip http secure-server
