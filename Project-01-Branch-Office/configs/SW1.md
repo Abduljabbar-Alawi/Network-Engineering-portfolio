@@ -9,8 +9,8 @@ hostname SW1
 no ip domain-lookup
 ip domain-name netsec.com
 service password-encryption
-enable secret 9 $9$Os3R4n4iwHnm/v$KwjzcDCv7/hM7W2oZpoXyv8oMG.FcxKSxKXhqMWyCvM
-username admin privilege 15 secret 5 $1$PCqM$OjidzBobpChGxH.geFGQR1
+enable secret <REDACTED_SECRET_HASH>
+username admin privilege 15 secret <REDACTED_SECRET_HASH>
 
 line con 0
  logging synchronous
