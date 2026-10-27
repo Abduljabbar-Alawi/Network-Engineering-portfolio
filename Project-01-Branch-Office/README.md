@@ -14,7 +14,7 @@ This project simulates a small branch office network that separates the Sales an
 
 ## 2. Topology & IP Addressing
 
-![Branch Office Network Topology](evidence/branch-office-topology.jpg)
+![Branch Office Network Topology](evidence/topology.jpg)
 
 ### Devices
 
