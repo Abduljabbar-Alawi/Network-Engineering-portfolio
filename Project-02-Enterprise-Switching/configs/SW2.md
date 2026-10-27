@@ -9,7 +9,7 @@ hostname SW2-Access
 no ip domain-lookup
 ip domain-name netsec.com
 service password-encryption
-enable secret <REDACTED_SECRET_HASH>
+enable algorithm-type scrypt secret <REDACTED_SECRET_HASH>
 username admin privilege 15 secret <REDACTED_SECRET_HASH>
 banner motd # Unauthorized Access Prohibited! #
 no ip http server
